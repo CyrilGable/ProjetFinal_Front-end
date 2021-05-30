@@ -1,0 +1,46 @@
+/*  Variables */
+:root {
+    --navbar-height: 64px;
+    --navbar-padding: 10px;
+
+    --border-color: #0003;
+    --form-color: #777;
+    --form-bgcolor: #F8F8F8;
+    --product-bgcolor: #EBEBEB;
+
+    --footer-padding: 10px;
+
+    --sm-fontsize: 0.7rem;
+}
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+html {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+strong {
+    font-weight: 700;
+}
+
+
+/* Sans media */
+
+
+
+/* Smartphone */
+@media screen and ( max-width: 600px ) {
+    /* Variables */
+    :root {
+        --global-horizontal-padding: 5vw;
+    }
+
+}
+
+/* PC */
+@media screen and ( min-width: 601px ) {
+    /* Variables */
+    :root {
+        --global-horizontal-padding: 10vw;
+    }
+
+}

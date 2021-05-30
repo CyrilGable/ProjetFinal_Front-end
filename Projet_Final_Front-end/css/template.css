@@ -1,0 +1,13 @@
+/* Sans media */
+
+
+
+/* Smartphone */
+@media screen and ( max-width: 600px ) {
+
+}
+
+/* PC */
+@media screen and ( min-width: 601px ) {
+
+}
