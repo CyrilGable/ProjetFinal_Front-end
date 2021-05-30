@@ -1,0 +1,334 @@
+/* Sans media */
+
+/* -------------------- Toutes les pages ------------------------- */
+/* Hero (image+texte de fond) */
+#hero {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 50px;
+    height: calc( 100vh - var( --navbar-height ) );
+    background: url( "../img/background/background-2_Pangolin.jpg" );
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 4px var( --border-color );
+}
+#hero h1 {
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+#hero a {
+    font-size: 1.5em;
+    color: inherit;
+}
+
+
+/* Main texts */
+main h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 1em;
+    padding-left: 10px;
+}
+main p {
+    line-height: 1.3em;
+    margin-top: 1em;
+    padding: 10px;
+}
+
+
+/* -------------------- Page accueil -------------------- */
+#accueil {
+    display: grid;
+    gap: 20px;
+    padding: 10px var( --global-horizontal-padding );
+    box-sizing: border-box;
+}
+#accueil p {
+    background-color: var( --form-bgcolor);
+}
+
+
+/* -------------------- Page Contact -------------------- */
+#contact {
+    padding: 10px var( --global-horizontal-padding )
+}
+#formulaire > h2 {
+    padding-left: 0.5em;
+}
+/* Formulaire */
+#contact form {
+    margin-top: 1em;
+    padding: 10px;
+    background-color: var( --form-bgcolor );
+    box-sizing: border-box;
+}
+/* les champs sauf les boutons submit */
+#contact form input:not[submit] {
+    color: var( --form-color );
+}
+/* Chacun des champs */
+.form-iteration {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: grid;
+    justify-content:left;
+    grid-template-columns: 150px 1fr;
+}
+/* libellés */
+.form-iteration label {
+    margin-right: 1.3em;
+    text-align: right;
+    line-height: 1.3em;
+}
+/* Bouton Submit */
+.submit {
+    width: 80px;
+    grid-column-start: 2;
+}
+/* précisions */
+.form-iteration > span {
+    grid-column-start: 2;
+    font-size: 0.75em;
+    padding: 1px 4px;
+}
+/* Newsletter déco */
+#newsletter {
+    background-color:var( --border-color );
+    padding:1em;
+}
+#newsletter > form {
+    background-color: var( --form-bgcolor );
+    color: black;
+}
+/* Style des input selon validation */
+#formulaire :required {
+    border-color: blue;
+}
+#formulaire :valid {
+    border-color: green
+}
+#formulaire :optional {
+    border-color: black
+}
+
+
+/* -------------------- Page produits -------------------- */
+main#listeproduits > #produits  {
+    padding: 10px var( --global-horizontal-padding ) 0 var( --global-horizontal-padding);
+}
+main#listeproduits > #produits > section > h2 {
+    padding-left: 0.5em;
+}
+/* ma div avec le comportement flex wrap */
+main#listeproduits > section > #flex {
+    margin-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    column-gap: 1.33%;
+    box-sizing: border-box;
+}
+/* ma div contenant les infos du produit */
+main#listeproduits > section > #flex > .produit {
+    width: 24%;
+    display:grid;
+    grid-template-rows: 1fr 3vw 10vw 3vw 5vw;
+    border: black 0.1vw solid;
+    box-sizing: border-box;
+    margin-bottom: 1.33%;
+    background-color: var(--form-bgcolor);
+}
+/* l'image du produit */
+main#listeproduits > section > #flex > .produit > .imgproduit {
+    width:100%;
+    height:20vw;
+    background-color: var(--product-bgcolor);
+}
+/* Nom du produit */
+main#listeproduits > section > #flex > .produit > .nomproduit {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 0;
+    padding-left: 0;
+    justify-self: center;
+    align-self: center;
+}
+/* les caractéristiques */
+main#listeproduits > section > #flex > .produit > .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1vw 2vw;
+}
+/* Prix */
+main#listeproduits > section > #flex > .produit > .prix {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0;
+    padding-left: 0;
+    justify-self: center;
+    align-self: top;
+}
+/* Bouton */
+main#listeproduits > section > #flex > .produit > .add {
+    margin: 1vw;
+    padding: 0;
+    font-size: 1.3em;
+    box-shadow: 0 0 2px var( --border-color );
+}
+
+
+/* -------------------- Page Panier -------------------- */
+main#panier > #produits  {
+    padding: 10px var( --global-horizontal-padding ) 0 var( --global-horizontal-padding);
+}
+main#panier > #produits > section > h2 {
+    padding-left: 0.5em;
+}
+/* ma div avec le comportement flex wrap */
+main#panier > section > #flex {
+    margin-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width:100%;
+    row-gap: 1.33%;
+    box-sizing: border-box;
+}
+/* ma div contenant les infos du produit */
+main#panier > section > #flex > .produit {
+    width: 100%;
+    height:24vw;
+    display:grid;
+    grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+    border: black 0.1vw solid;
+    box-sizing: border-box;
+    margin-bottom: 1.33%;
+    background-color: var(--form-bgcolor);
+}
+
+/* l'image du produit */
+main#panier > section > #flex > .produit > .imgproduit {
+    height:100%;
+    width:20vw;
+    background-color: var(--product-bgcolor);
+}
+/* Nom du produit */
+main#panier > section > #flex > .produit > .nomproduit {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 0;
+    padding-left: 0;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+/* les caractéristiques */
+main#panier > section > #flex > .produit > .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 2vw;
+    text-align: center;
+}
+/* Prix */
+main#panier > section > #flex > .produit > .prix {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0;
+    padding-left: 0;
+    justify-self: center;
+    align-self: center;
+}
+main#panier > section > #flex > .produit > .quantite {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    margin: 1vw 1vw;
+
+}
+main#panier > section > #flex > .produit > .quantite > button {
+    width:100%;
+    height: 33%;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+main#panier > section > #flex > .produit > .quantite > div {
+    height: 33%;
+    text-align: center;
+    vertical-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main#panier > section > #flex > .produit > .quantite > div > span {
+    font-size:1em;
+}
+
+
+
+/* -------------------- Medias -------------------- */
+
+/* Smartphone */
+@media screen and ( max-width: 600px ) {
+    body {
+        /* font-size plus petite pour les smartphones (0.7rem) */
+        font-size: var( --sm-fontsize );
+    }
+    #hero {
+        background-size: cover;
+        background-position:-20vw;
+    }
+    /* Ajustement des petits textes pour lisibilité */
+    header li,p,form {
+        font-size: 1rem;
+    }
+    /* Page Contact */
+    .form-iteration {
+        grid-template-columns: 130px 1fr;
+        vertical-align: center;
+    }
+}
+
+/* PC */
+@media screen and ( min-width: 601px ) {
+    /* Page Accueil : Colonnes partie "Découvrir" */
+    #accueil {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    /* Page contact : taille des champs */
+    #nom,#raison,#email {
+        width: 175px;
+    }
+    #sujet{
+        width: 250px;
+    }
+    #telephone {
+        width: 242px
+    }
+}
+
+/* Affichage réduit produits */
+@media screen and ( max-width: 1200px ) {
+    main#listeproduits > section > #flex > .produit {
+        width: 48%;
+        display:grid;
+        grid-template-rows: 1fr 6vw 20vw 6vw 10vw;
+        margin-bottom: 1.33%;
+    }
+    main#listeproduits > section > #flex > .produit > .imgproduit {
+        background-color: var(--form-bgcolor);
+        width:100%;
+        height:auto;
+    }
+    
+};

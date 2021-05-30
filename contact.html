@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyril - PangoShield</title>
+    <!-- CSS reset -->
+    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+    <!-- Global -->
+    <link rel="stylesheet" href="css/global.css">
+    <!-- Navbar -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <!-- Footer -->
+    <link rel="stylesheet" href="css/footer.css">
+    <!-- Pour la page -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <!-- Menu burger -->
+            <img src="img/nav/burger_menu.svg" alt="menu" id="burger">
+            
+            <!-- Logo + Nom -->
+            <a href="index.html" title="page d'accueil">
+                <img src="img/nav/logo_Pangoshield.svg" alt="logo Pangoshield">
+                <span>PANGOSHIELD</span>
+            </a>
+            <!-- Liste liens -->
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="produits.html">Produits</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>            
+            
+            <!-- Panier -->
+            <a href="panier.html" title="panier">
+                <img src="img/nav/panier.svg" alt="panier" id="panier">
+            </a>
+        </nav>
+
+        <!-- Hero -->
+        <section id="hero">
+            <h1>PangoShield<br>La Protection Ultime</h1>
+            <a href="index.html#accueil">Découvrir</a>
+        </section>
+
+    </header>
+
+    <!-- Main -->
+    <main id="contact">
+        <!-- Formulaire de contact -->
+        <section id="formulaire">
+            <h2>Pour nous contacter :</h2>
+            <form>
+                <!-- email -->
+                <div class="form-iteration">
+                    <label for="email">E-mail</label>
+                    <input type="email" placeholder="Entrez votre email" maxlength="50" id="email" required>
+                </div>
+
+                <!-- nom -->
+                <div class="form-iteration">
+                    <label for="nom">Nom</label>
+                    <input type="text" placeholder="Entrez votre nom" maxlength="50" id="nom">
+                </div>
+                <!-- raison sociale -->
+                <div class="form-iteration">
+                    <label for="nom">Raison sociale</label>
+                    <input type="text" placeholder="Entrez votre raison sociale" maxlength="50" id="raison">
+                </div>
+                <!-- Téléphone -->
+                <div class="form-iteration">
+                    <label for="telephone">Téléphone</label>
+                    <input type="tel" placeholder="Entrez votre numéro de téléphone" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" id="telephone">
+                    <span>Format: +33 6 XX XX XX XX</span>
+                </div>
+                <!-- Liste déroulante -->
+                <div class="form-iteration">
+                    <label for="sujet">A propos de :</label>
+                    <select name="sujet" id="sujet" required>
+                        <option value="">--Veuillez sélectionner un sujet--</option>
+                        <option value="sujetA">sujetA</option>
+                        <option value="sujetB">sujetB</option>
+                        <option value="sujetC">sujetC</option>
+                        <option value="sujetD">sujetD</option>
+                        <option value="sujetE">sujetE</option>
+                    </select>
+                </div>
+                <!-- Message -->
+                <div class="form-iteration">
+                    <label for="message">Ecrivez votre message :</label>
+                    <textarea placeholder="Entrez votre message" maxlength="5000" rows="10" cols="40" id="message" required></textarea>
+                    <span>(Max. 5000 caractères)</span>
+                </div>
+
+                <!-- Submit -->
+                <div class="form-iteration">
+                    <input type="submit" value="Valider" class="submit">
+                </div>
+            </form>
+        </section>
+
+        <!-- Inscription Newsletter -->
+        <section id="newsletter">
+            <h2>Inscrivez-vous à notre Newsletter !</h2>
+            <p>Vous recevrez alors l'ensemble de nos offres commerciales à un rythme hebdomadaire, possibilité de vous désabonner à tout instant. </p>
+            <form>
+                <!-- email -->
+                <div class="form-iteration">
+                    <label for="email">E-mail</label>
+                    <input type="email" placeholder="Entrez votre email" id="email">
+                </div>
+                <!-- Submit -->
+                <div class="form-iteration">
+                    <input type="submit" value="S'inscrire" class="submit">
+                    <span>Si l'adresse renseignée est valide, vous recevrez un e-mail de confirmation.</span>
+                </div>
+            </form>
+
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Adresse -->
+        <section>
+            <p>Société PangoShield</p>
+            <p>42 rue du Lorem</p>
+            <p>77600 Guermantes</p>
+        </section>
+        <!-- Réseaux sociaux -->
+        <section>
+            <a href="https://fr.wikipedia.org/wiki/Facebook" title="monFacebook"><img
+            src="img/socials/facebook.png" alt="logo facebook"></a>
+            <a href="https://fr.wikipedia.org/wiki/Facebook" title="monInstagram"><img
+            src="img/socials/instagram.png" alt="logo instagram"></a>
+            <a href="https://fr.wikipedia.org/wiki/Facebook" title="monLinkedin"><img
+            src="img/socials/linkedin.png" alt="logo linkedin"></a>
+        </section>
+        <!-- Mentions légales -->
+        <section>
+            <span>Copyright 2021 PangoShield - </span>
+            <a href="https://fr.wikipedia.org/wiki/Mentions_l%C3%A9gales">Mentions légales</a>
+        </section>
+    </footer>
+
+
+    <!-- JS global -->
+	<script src="js/script.js"></script>
+</body>
+</html>
